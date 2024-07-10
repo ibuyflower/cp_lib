@@ -31,6 +31,7 @@ using str = string;
 #define FOR3(i, a, b) for(ll i = a; i <= b; ++i)
 #define FOR4(i, a, b) for(ll i = a; i < b; ++i)
 #define FOR1R(i, n) for(ll i = n - 1; i > -1; --i)
+#define FOR3R(i, a, b) for(ll i = a; i >= b; --i)
 #define LB(a, k) distance((a).begin(), lower_bound(all(a), (k)))
 #define UB(a, k) distance((a).begin(), upper_bound(all(a), (k)))
 #define len(a) int(a.size())
