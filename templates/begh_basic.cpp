@@ -89,7 +89,7 @@ istream &operator>>(istream &in, pair<T, U> &a) {
 
 template <typename T, typename U>
 ostream &operator<<(ostream &out, pair<T, U> &a) {
-    out << a.first << ' ' << a.second << ' ';
+    out << a.first << ' ' << a.second;
     return out;
 }
 
