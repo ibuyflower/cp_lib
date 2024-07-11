@@ -1,4 +1,4 @@
-struct segtree_number_of_mins
+struct segtree_number_of_mins // segment tree for number of minimums of segment
 {
     vector<pair<ll, ll>> tree;
     int size;
@@ -49,5 +49,3 @@ struct segtree_number_of_mins
         return sum(l, r, 0, 0, size);
     }
 };
-
-// segment tree for number of minimums of segment

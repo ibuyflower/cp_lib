@@ -174,7 +174,153 @@ void Yes(bool t = 1) { cout <<  (t ? "Yes" : "No") << '\n'; }
 void No(bool t = 1) { Yes(!t); }
 void yes(bool t = 1) { cout << (t ? "yes" : "no") << '\n'; }
 void no(bool t = 1) { yes(!t); }
+/*
+struct segtree_sum // segment tree for sum on segment
+{
+    vll tree;
+    int size;
+ 
+    void init(int n){
+        size = 1;
+        while(size < n) size *= 2;
+        tree.assign(2 * size - 1, 0);
+    }
+ 
+    void set(int i, int v, int x, int lx, int rx)
+    {
+        if(rx - lx == 1){
+            tree[x] = v;
+            return;
+        }
+        int m = (lx + rx) / 2;
+        if(i < m){
+            set(i, v, 2 * x + 1, lx, m);
+        }
+        else{
+            set(i, v, 2 * x + 2, m, rx);
+        }
+        tree[x] = tree[2 * x + 1] + tree[2 * x + 2];
+    }
+ 
+    void set(int i, int v){
+        set(i, v, 0, 0, size);
+    }
+ 
+    ll sum(int l, int r, int x, int lx, int rx)
+    {
+        if(l >= rx || lx >= r) return 0;
+        if(lx >= l && rx <= r) return tree[x];
+        int m = (lx + rx) / 2;
+        return sum(l, r, 2 * x + 1, lx, m) + sum(l, r, 2 * x + 2, m, rx);
+    }
+ 
+    ll sum(int l, int r)
+    {
+        return sum(l, r, 0, 0, size);
+    }
+};
+*/
 
+/*
+struct segtree_min // segment tree for minimum on segment
+{
+    vll tree;
+    int size;
+
+    void init(int n){
+        size = 1;
+        while(size < n) size *= 2;
+        tree.assign(2 * size - 1, LLONG_MAX);
+    }
+
+    void set(int i, int v, int x, int lx, int rx)
+    {
+        if(rx - lx == 1){
+            tree[x] = v;
+            return;
+        }
+        int m = (lx + rx) / 2;
+        if(i < m){
+            set(i, v, 2 * x + 1, lx, m);
+        }
+        else{
+            set(i, v, 2 * x + 2, m, rx);
+        }
+        tree[x] = min(tree[2 * x + 1], tree[2 * x + 2]);
+    }
+
+    void set(int i, int v){
+        set(i, v, 0, 0, size);
+    }
+
+    ll sum(int l, int r, int x, int lx, int rx)
+    {
+        if(l >= rx || lx >= r) return LLONG_MAX;
+        if(lx >= l && rx <= r) return tree[x];
+        int m = (lx + rx) / 2;
+        return min(sum(l, r, 2 * x + 1, lx, m), sum(l, r, 2 * x + 2, m, rx));
+    }
+
+    ll sum(int l, int r)
+    {
+        return sum(l, r, 0, 0, size);
+    }
+};
+*/
+
+/*
+struct segtree_number_of_mins // segment tree for number of minimums of segment
+{
+    vector<pair<ll, ll>> tree;
+    int size;
+ 
+    void init(int n){
+        size = 1;
+        while(size < n) size *= 2;
+        tree.assign(2 * size - 1, {LLONG_MAX, 0});
+    }
+ 
+    void set(int i, int v, int x, int lx, int rx)
+    {
+        if(rx - lx == 1){
+            tree[x] = {v, 1};
+            return;
+        }
+        int m = (lx + rx) / 2;
+        if(i < m){
+            set(i, v, 2 * x + 1, lx, m);
+        }
+        else{
+            set(i, v, 2 * x + 2, m, rx);
+        }
+        if(tree[2 * x + 1].first == tree[2 * x + 2].first){
+            tree[x] = {(tree[2 * x + 1].first), (tree[2 * x + 1].second + tree[2 * x + 2].second)};
+        }
+        else tree[x] = {min(tree[2 * x + 1].first, tree[2 * x + 2].first), (tree[2 * x + 1].first < tree[2 * x + 2].first ? tree[2 * x + 1].second : tree[2 * x + 2].second)};
+    }
+ 
+    void set(int i, int v){
+        set(i, v, 0, 0, size);
+    }
+ 
+    pair<ll, ll> sum(int l, int r, int x, int lx, int rx)
+    {
+        if(l >= rx || lx >= r) return {LLONG_MAX, 0};
+        if(lx >= l && rx <= r) return tree[x];
+        int m = (lx + rx) / 2;
+        pair<ll, ll> sum1 = sum(l, r, 2 * x + 1, lx, m), sum2 = sum(l, r, 2 * x + 2, m, rx);
+        if(sum1.first == sum2.first){
+            return {sum1.first, sum1.second + sum2.second};
+        }
+        return min(sum1, sum2);
+    }
+ 
+    pair<ll, ll> sum(int l, int r)
+    {
+        return sum(l, r, 0, 0, size);
+    }
+};
+*/
 void solve() {
     $END$
 }

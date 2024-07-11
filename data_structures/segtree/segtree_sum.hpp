@@ -1,4 +1,4 @@
-struct segtree_sum
+struct segtree_sum // segment tree for sum on segment
 {
     vll tree;
     int size;
@@ -42,5 +42,3 @@ struct segtree_sum
         return sum(l, r, 0, 0, size);
     }
 };
-
-// segment tree for sum on segment
