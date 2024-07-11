@@ -138,6 +138,13 @@ vector<T> prefsum(vector<U> &A, int off = 1) {
     return B;
 }
 
+template <typename T, typename U>
+T SUM(const vector<U> &A) {
+    T sm = 0;
+    for (auto &&a: A) sm += a;
+    return sm;
+}
+
 ll tpow(int m)
 {
     ll ans = 1;
