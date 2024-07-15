@@ -153,7 +153,7 @@ ll tpow(int m)
 }
 
 template<typename T>
-T div_up(T &a, T &b) {
+T div_up(T a, T b) {
     if (a == 0) return 0;
     return (a - 1) / b + 1;
 }
