@@ -16,8 +16,8 @@ using str = string;
 #define VOUTN(a) { for(size_t II = 0; II < (a).size(); ++II) cout << (a)[II] << '\n'; }
 #define RVOUT(a) { for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << ' '; }
 #define RVOUTN(a) { for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << '\n'; }
-#define VVIN(a) { for(size_t II = 0; II < (a).size(); ++II) for(size_t JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ]; }
-#define VVOUT(a) { for(size_t II = 0; II < (a).size(); ++II) { for(size_t JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';} }
+#define VVIN(a) { for(ll II = 0; II < (a).size(); ++II) for(size_t JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ]; }
+#define VVOUT(a) { for(ll II = 0; II < (a).size(); ++II) { for(size_t JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';} }
 #define FOROUT(type, a) { for(type LKL : a) cout << LKL << ' '; }
 #define FOROUTN(type, a) { for(type LKL : a) cout << LKL << '\n'; }
 #define vv(type, name, h, ...) { vector<vector<type>> name(h, vector<type>(__VA_ARGS__)) }
@@ -123,6 +123,9 @@ ostream &operator<<(ostream &out, pair<T, U> &a) {
 #define VEC(type, name, size) \
     vector<type> name(size);    \
     cin >> name
+#define VV(type, name, h, w)                     \
+    vector<vector<type>> name(h, vector<type>(w)); \
+    VVIN(name)
 #define fi first
 #define se second
 #define ins insert
