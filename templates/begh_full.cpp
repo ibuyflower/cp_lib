@@ -184,7 +184,7 @@ void no(bool t = 1) { yes(!t); }
 /*
 struct segtree_sum // segment tree for sum on segment
 {
-    vll tree;
+    vector<long long> tree;
     int size;
  
     void init(int n){
@@ -231,7 +231,7 @@ struct segtree_sum // segment tree for sum on segment
 /*
 struct segtree_min // segment tree for minimum on segment
 {
-    vll tree;
+    vector<long long> tree;
     int size;
 
     void init(int n){
