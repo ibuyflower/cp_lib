@@ -1,6 +1,6 @@
 struct segtree_sum // segment tree for sum on segment
 {
-    vll tree;
+    vector<long long> tree;
     int size;
  
     void init(int n){

@@ -1,6 +1,6 @@
 struct segtree_min // segment tree for minimum on segment
 {
-    vll tree;
+    vector<long long> tree;
     int size;
 
     void init(int n){
