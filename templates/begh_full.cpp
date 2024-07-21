@@ -134,6 +134,18 @@ ostream &operator<<(ostream &out, pair<T, U> &a) {
 #define se second
 #define ins insert
 
+template <class A, class B>
+inline bool chmax(A &a, const B &b) {
+    if(a < b){ a = b; return 1; }
+    return 0;
+}
+
+template <class A, class B>
+inline bool chmin(A &a, const B &b) {
+    if(a > b){ a = b; return 1; }
+    return 0;
+}
+
 template <typename T, typename U>
 vector<T> prefsum(vector<U> &A, int off = 1) {
     int N = A.size();
