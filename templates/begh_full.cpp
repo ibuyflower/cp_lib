@@ -41,8 +41,8 @@ using str = string;
 #define len(a) int(a.size())
 #define lenll(a) ll(a.size())
 
-using mi = map<int, int>;
-using mll = map<ll, ll>;
+using mpi = map<int, int>;
+using mpll = map<ll, ll>;
 using sint = set<int>;
 using sll = set<ll>;
 using pi = pair<int, int>;
