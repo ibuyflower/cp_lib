@@ -16,8 +16,8 @@ using str = string;
 #define VOUTN(a) { for(size_t II = 0; II < (a).size(); ++II) cout << (a)[II] << '\n'; }
 #define RVOUT(a) { for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << ' '; }
 #define RVOUTN(a) { for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << '\n'; }
-#define VVIN(a) { for(size_t II = 0; II < (a).size(); ++II) for(size_t JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ]; }
-#define VVOUT(a) { for(size_t II = 0; II < (a).size(); ++II) { for(size_t JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';} }
+#define VVIN(a) { for(ll II = 0; II < (a).size(); ++II) for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ]; }
+#define VVOUT(a) { for(ll II = 0; II < (a).size(); ++II) { for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';} }
 #define FOROUT(type, a) { for(type LKL : a) cout << LKL << ' '; }
 #define FOROUTN(type, a) { for(type LKL : a) cout << LKL << '\n'; }
 #define vv(type, name, h, ...) { vector<vector<type>> name(h, vector<type>(__VA_ARGS__)) }
@@ -25,13 +25,17 @@ using str = string;
 #define VEC2(type, name, ...) vector<type> name(__VA_ARGS__)
 #define MIN(v) *min_element(all(v))
 #define MAX(v) *max_element(all(v))
-#define FOR(n) for(ll _ = 0; _ < n; ++_)
-#define FOR1(i, n) for(ll i = 0; i < n; ++i)
-#define FOR2(i, n) for(ll i = 0; i <= n; ++i)
+#define FOR1(n) for(ll _ = 0; _ < n; ++_)
+#define FOR2(i, n) for(ll i = 0; i < n; ++i)
 #define FOR3(i, a, b) for(ll i = a; i <= b; ++i)
-#define FOR4(i, a, b) for(ll i = a; i < b; ++i)
-#define FOR1R(i, n) for(ll i = n - 1; i > -1; --i)
-#define FOR3R(i, a, b) for(ll i = a; i >= b; --i)
+#define FOR4(i, a, b, c) for(ll i = a; i <= b; i+=(c))
+#define FOR1_R(n) for(ll _ = n - 1; _ > -1; --_)
+#define FOR2_R(i, n) for(ll i = n - 1; i > -1; --i)
+#define FOR3_R(i, a, b) for(ll i = a; i >= b; --i)
+#define overload4(a, b, c, d, e, ...) e
+#define overload3(a, b, c, d, ...) d
+#define FOR(...) overload4(__VA_ARGS__, FOR4, FOR3, FOR2, FOR1)(__VA_ARGS__)
+#define FOR_R(...) overload3(__VA_ARGS__, FOR3_R, FOR2_R, FOR1_R)(__VA_ARGS__)
 #define LB(a, k) distance((a).begin(), lower_bound(all(a), (k)))
 #define UB(a, k) distance((a).begin(), upper_bound(all(a), (k)))
 #define len(a) int(a.size())
@@ -123,6 +127,9 @@ ostream &operator<<(ostream &out, pair<T, U> &a) {
 #define VEC(type, name, size) \
     vector<type> name(size);    \
     cin >> name
+#define VV(type, name, h, w)                     \
+    vector<vector<type>> name(h, vector<type>(w)); \
+    VVIN(name)
 #define fi first
 #define se second
 #define ins insert
@@ -148,7 +155,7 @@ T SUM(const vector<U> &A) {
 ll tpow(int m)
 {
     ll ans = 1;
-    FOR1(i, m) ans *= 10;
+    for(int i = 0; i < m; ++i) ans *= 10;
     return ans;
 }
 
