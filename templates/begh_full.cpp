@@ -164,9 +164,10 @@ T SUM(const vector<U> &A) {
     return sm;
 }
 
-ll tpow(int m)
+template <typename T>
+T tpow(int m)
 {
-    ll ans = 1;
+    T ans = 1;
     for(int i = 0; i < m; ++i) ans *= 10;
     return ans;
 }
