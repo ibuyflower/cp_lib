@@ -61,18 +61,6 @@ using vvc = vector<vc<T>>;
 template <class T>
 using vvvc = vector<vvc<T>>;
 
-void read() {}
-template <class H, class... T>
-void read(H &h, T &... t) {
-    cin >> h; read(t...);
-}
-
-void readg() {}
-template <class H, class... T>
-void readg(H &h, T &... t) {
-    getline(cin, h); readg(t...);
-}
-
 template <typename T>
 istream &operator>>(istream &in, vector<T> &a) {
     for (auto &x : a) in >> x;
@@ -95,6 +83,24 @@ template <typename T, typename U>
 ostream &operator<<(ostream &out, pair<T, U> &a) {
     out << a.first << ' ' << a.second;
     return out;
+}
+
+void read() {}
+template <class H, class... T>
+void read(H &h, T &... t) {
+    cin >> h; read(t...);
+}
+
+void readg() {}
+template <class H, class... T>
+void readg(H &h, T &... t) {
+    getline(cin, h); readg(t...);
+}
+
+void print(str q) {}
+template <class H, class... T>
+void print(str q, H h, T &... t){
+    cout << h << q; print(q, t...);
 }
 
 #define INT(...)     \
