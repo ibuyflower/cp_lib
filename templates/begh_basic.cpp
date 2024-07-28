@@ -99,7 +99,7 @@ void readg(H &h, T &... t) {
 
 void print(str q) {}
 template <class H, class... T>
-void print(str q, H h, T &... t){
+void print(str q, H h, T ... t){
     cout << h << q; print(q, t...);
 }
 
