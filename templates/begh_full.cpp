@@ -40,6 +40,7 @@ using str = string;
 #define UB(a, k) distance((a).begin(), upper_bound(all(a), (k)))
 #define len(a) int(a.size())
 #define lenll(a) ll(a.size())
+#define eb emplace_back
 
 using mpi = map<int, int>;
 using mpll = map<ll, ll>;
@@ -97,10 +98,10 @@ void readg(H &h, T &... t) {
     getline(cin, h); readg(t...);
 }
 
-void print(str q) {}
+void print() { cout << '\n';}
 template <class H, class... T>
-void print(str q, H h, T ... t){
-    cout << h << q; print(q, t...);
+void print(H h, T ... t){
+    cout << h << " "; print(t...);
 }
 
 #define INT(...)     \
