@@ -62,18 +62,6 @@ using vvc = vector<vc<T>>;
 template <class T>
 using vvvc = vector<vvc<T>>;
 
-template <typename T>
-istream &operator>>(istream &in, vector<T> &a) {
-    for (auto &x : a) in >> x;
-    return in;
-}
-
-template <typename T>
-ostream &operator<<(ostream &out, vector<T> &a) {
-    for (auto &x : a) out << x <<' ';
-    return out;
-}
-
 template <typename T, typename U>
 istream &operator>>(istream &in, pair<T, U> &a) {
     in >> a.first >> a.second;
@@ -83,6 +71,18 @@ istream &operator>>(istream &in, pair<T, U> &a) {
 template <typename T, typename U>
 ostream &operator<<(ostream &out, pair<T, U> &a) {
     out << a.first << ' ' << a.second;
+    return out;
+}
+
+template <typename T>
+istream &operator>>(istream &in, vector<T> &a) {
+    for (auto &x : a) in >> x;
+    return in;
+}
+
+template <typename T>
+ostream &operator<<(ostream &out, vector<T> &a) {
+    for (auto &x : a) out << x <<' ';
     return out;
 }
 
