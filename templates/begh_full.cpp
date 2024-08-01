@@ -12,17 +12,13 @@ using str = string;
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define VOUT(a) { for(size_t II = 0; II < (a).size(); ++II) cout << (a)[II] << ' '; }
-#define VOUTN(a) { for(size_t II = 0; II < (a).size(); ++II) cout << (a)[II] << '\n'; }
-#define RVOUT(a) { for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << ' '; }
-#define RVOUTN(a) { for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << '\n'; }
-#define VVIN(a) { for(ll II = 0; II < (a).size(); ++II) for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ]; }
-#define VVOUT(a) { for(ll II = 0; II < (a).size(); ++II) { for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';} }
-#define FOROUT(type, a) { for(type LKL : a) cout << LKL << ' '; }
-#define FOROUTN(type, a) { for(type LKL : a) cout << LKL << '\n'; }
-#define vv(type, name, h, ...) { vector<vector<type>> name(h, vector<type>(__VA_ARGS__)) }
-#define VEC1(type, name, size) vector<type> name(size)
-#define VEC2(type, name, ...) vector<type> name(__VA_ARGS__)
+#define RVOUT(a) for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << ' ';
+#define RVOUTN(a) for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << '\n';
+#define VVIN(a) for(ll II = 0; II < (a).size(); ++II) for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ];
+#define VVOUT(a) for(ll II = 0; II < (a).size(); ++II) { for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';}
+#define FOROUT(type, a) for(type LKL : a) cout << LKL << ' ';
+#define FOROUTN(type, a) for(type LKL : a) cout << LKL << '\n';
+#define vv(type, name, h, ...) vector<vector<type>> name(h, vector<type>(__VA_ARGS__))
 #define MIN(v) *min_element(all(v))
 #define MAX(v) *max_element(all(v))
 #define FOR1(n) for(ll _ = 0; _ < n; ++_)
@@ -41,6 +37,7 @@ using str = string;
 #define len(a) int(a.size())
 #define lenll(a) ll(a.size())
 #define eb emplace_back
+#define pb push_back
 
 using mpi = map<int, int>;
 using mpll = map<ll, ll>;
@@ -137,8 +134,8 @@ void print(H h, T ... t){
 #define VV(type, name, h, w)                     \
     vector<vector<type>> name(h, vector<type>(w)); \
     VVIN(name)
-#define fi first
-#define se second
+#define ff first
+#define ss second
 #define ins insert
 
 template <class A, class B>
