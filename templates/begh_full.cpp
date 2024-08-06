@@ -60,6 +60,8 @@ template <class T>
 using vvc = vector<vc<T>>;
 template <class T>
 using vvvc = vector<vvc<T>>;
+template <class T>
+using PAIR = pair<T, T>;
 
 template <typename T, typename U>
 istream &operator>>(istream &in, pair<T, U> &a) {
