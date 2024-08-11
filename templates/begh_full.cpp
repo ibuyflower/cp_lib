@@ -215,9 +215,9 @@ T numsum(T a, int e = 0)
     return (e ? res : anores);
 }
 
-void YES(bool t = 1) { cout <<  (t ? "YES" : "NO") << '\n'; }
+void YES(bool t = 1) { cout << (t ? "YES" : "NO") << '\n'; }
 void NO(bool t = 1) { YES(!t); }
-void Yes(bool t = 1) { cout <<  (t ? "Yes" : "No") << '\n'; }
+void Yes(bool t = 1) { cout << (t ? "Yes" : "No") << '\n'; }
 void No(bool t = 1) { Yes(!t); }
 void yes(bool t = 1) { cout << (t ? "yes" : "no") << '\n'; }
 void no(bool t = 1) { yes(!t); }
