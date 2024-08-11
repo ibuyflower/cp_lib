@@ -40,6 +40,18 @@ using db = double;
 #define lenll(a) ll(a.size())
 #define eb emplace_back
 #define pb push_back
+#ifdef LOCAL
+#define SHOW1(a) cout<<#a<<" = "<<(a)<<'\n'
+#define SHOW2(a, b) cout<<#a<<" = "<<(a)<<", "<<#b<<" = "<<(b)<<'\n'
+#define SHOW3(a, b, c) cout<<#a<<" = "<<(a)<<", "<<#b<<" = "<<(b)<<", "<<#c<<" = "<<(c)<<'\n'
+#define SHOW4(a, b, c, d) cout<<#a<<" = "<<(a)<<", "<<#b<<" = "<<(b)<<", "<<#c<<" = "<<(c)<<", "<<#d<<" = "<<(d)<<'\n'
+#define SHOW5(a, b, c, d, e) cout<<#a<<" = "<<(a)<<", "<<#b<<" = "<<(b)<<", "<<#c<<" = "<<(c)<<", "<<#d<<" = "<<(d)<<", "<<#e<<" = "<<(e)<<'\n'
+#define SHOW6(a, b, c, d, e, f) cout<<#a<<" = "<<(a)<<", "<<#b<<" = "<<(b)<<", "<<#c<<" = "<<(c)<<", "<<#d<<" = "<<(d)<<", "<<#e<<" = "<<(e)<<", "<<#f<<" = "<<(f)<<'\n'
+#define overload6(a, b, c, d, e, f, g, ...) g
+#define SHOW(...) overload6(__VA_ARGS__, SHOW6, SHOW5, SHOW4, SHOW3, SHOW2, SHOW1)(__VA_ARGS__)
+#else
+#define SHOW(...)
+#endif
 
 using mpi = map<int, int>;
 using mpll = map<ll, ll>;
