@@ -368,6 +368,91 @@ struct segtree_number_of_mins // segment tree for number of minimums of segment
     }
 };
 */
+
+
+
+/* // modulo arithmetic
+const int MOD = 1e9+7; //998244353;
+
+inline int mmd(int a, int b){
+    return (a * 1LL * b % MOD);
+}
+
+int binpow(int a, int b)
+{
+    int ans = 1 % MOD, c = a;
+    while(b > 0){
+        if(b & 1) ans = mmd(ans, c);
+        c = mmd(c, c);
+        b >>= 1;
+    }
+    return ans;
+}
+
+inline int dmd(int a, int b){
+    return mmd(a, (binpow(b, MOD - 2)));
+}
+
+const int MAXN = 1e7;
+
+vector <int> fact = [](){
+    vector <int> f(MAXN + 1);
+    f[0] = 1;
+    for (int i = 1; i <= MAXN; ++i) f[i] = mmd(f[i - 1],i);
+    return f;
+}();
+
+vector <int> infact = [](){
+    vector <int> f(MAXN + 1);
+    f[MAXN] = binpow(fact[MAXN], MOD - 2);
+    for (int i = MAXN - 1; i >= 0; --i) f[i] = mmd(f[i + 1], i + 1);
+    return f;
+}();
+
+int C(int n, int k){
+    if (k < 0 || k > n || n < 0) return 0;
+    return mmd(mmd(fact[n], infact[n - k]), infact[k]);
+}
+*/
+
+/*
+struct RDcomp{ // sqrt decomposition
+    int len, blocklen, bcnt;
+    vector<int> a;
+    RDcomp(const vector<int>& A){
+        len = (int)(A.size());
+        a = A;
+        blocklen = (int)(ceil(sqrt(len / 2.)));
+        //blocklen = 1;
+        //blocklen = 256;
+        //blocklen = 512;
+        bcnt = len / blocklen + 1;
+    }
+    int bget(int P) const {
+        return P / blocklen;
+    }
+    int bbeg(int B) const {
+        return B * blocklen;
+    }
+    int bend(int B) const {
+        return min(len, bbeg(B) + blocklen);
+    }
+    void Bblock(int b){
+        int beg = bbeg(b), end = bend(b);
+        for(int i = beg; i < end; ++i){
+            
+        }
+    }
+    void build(){
+        for (int i = 0; i < bcnt; ++i)
+        {
+            Bblock(i);
+        }
+    }
+    
+};
+*/
+
 void solve() {
     $END$
 }
