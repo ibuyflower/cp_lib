@@ -155,13 +155,13 @@ void print(H h, T ... t){
 #define ins insert
 
 template <class A, class B>
-inline bool chmax(A &a, const B &b) {
+inline bool chmax(A &a, const B b) {
     if(a < b){ a = b; return 1; }
     return 0;
 }
 
 template <class A, class B>
-inline bool chmin(A &a, const B &b) {
+inline bool chmin(A &a, const B b) {
     if(a > b){ a = b; return 1; }
     return 0;
 }
@@ -199,7 +199,7 @@ T div_up(T a, T b) {
 }
 
 template<typename T>
-T lcm(T &a, T &b) {
+T lcm(T a, T b) {
     return a * b / __gcd(a, b);
 }
 
