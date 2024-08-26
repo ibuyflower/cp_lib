@@ -215,6 +215,18 @@ T numsum(T a, int e = 0)
     return (e ? res : anores);
 }
 
+template <typename T, typename H>
+T binpow(T a, H b)
+{
+    T ans = 1, c = a;
+    while(b > 0){
+        if(b & 1) ans = ans * c;
+        c *= c;
+        b >>= 1;
+    }
+    return ans;
+}
+
 void YES(bool t = 1) { cout << (t ? "YES" : "NO") << '\n'; }
 void NO(bool t = 1) { YES(!t); }
 void Yes(bool t = 1) { cout << (t ? "Yes" : "No") << '\n'; }
