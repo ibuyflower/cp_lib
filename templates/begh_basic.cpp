@@ -216,7 +216,7 @@ T numsum(T a, int e = 0)
 }
 
 template <typename T, typename H>
-T binpow(T a, H b)
+T bin_pow(T a, H b)
 {
     T ans = 1, c = a;
     while(b > 0){
