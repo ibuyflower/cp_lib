@@ -53,19 +53,8 @@ using db = double;
 #define SHOW(...)
 #endif
 
-using mpi = map<int, int>;
-using mpll = map<ll, ll>;
-using sint = set<int>;
-using sll = set<ll>;
-using pi = pair<int, int>;
-using vpi = vector<pi>;
-using pll = pair<ll, ll>;
-using vpll = vector<pll>;
-using vull = vector<ull>;
 using vi = vector<int>;
-using vvi = vector<vector<int>>;
 using vll = vector<long long>;
-using vvll = vector<vector<long long>>;
 template <class T>
 using vc = vector<T>;
 template <class T>
