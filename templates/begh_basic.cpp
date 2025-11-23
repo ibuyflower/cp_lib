@@ -14,13 +14,6 @@ using db = double;
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define RVOUT(a) for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << ' ';
-#define RVOUTN(a) for(int II = (a).size() - 1; II > -1; --II) cout << (a)[II] << '\n';
-#define VVIN(a) for(ll II = 0; II < (a).size(); ++II) for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cin >> (a)[II][JJ];
-#define VVOUT(a) for(ll II = 0; II < (a).size(); ++II) { for(ll JJ = 0; JJ < (a)[II].size(); JJ++) cout << (a)[II][JJ] << ' '; cout << '\n';}
-#define FOROUT(type, a) for(type LKL : a) cout << LKL << ' ';
-#define FOROUTN(type, a) for(type LKL : a) cout << LKL << '\n';
-#define vv(type, name, h, ...) vector<vector<type>> name(h, vector<type>(__VA_ARGS__))
 #define MIN(v) *min_element(all(v))
 #define MAX(v) *max_element(all(v))
 #define FOR1(n) for(ll _ = 0; _ < n; ++_)
