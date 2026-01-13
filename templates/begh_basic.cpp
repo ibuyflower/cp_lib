@@ -11,7 +11,6 @@ using uint = unsigned int;
 using str = string;
 using ldb = long double;
 using db = double;
-using i128 = __int128;
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
